@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+
+        int suma = 0; // Inicialización de la variable para la suma
+
+        // Registro del tiempo de inicio de la ejecución
+        long inicio = System.currentTimeMillis();
+
+        // Suma consecutiva de los números entre num1 y num2
+        for (int i = num1; i <= num2; i++) {
+            suma += i; // Acumulación de la suma de los números
+        }
+
+        // Registro del tiempo de finalización de la ejecución
+        long fin = System.currentTimeMillis();
+
+        // Cálculo del tiempo de ejecución en milisegundos
+        long tiempoEjecucion = fin - inicio;
+
+        // Mostrar la suma y el tiempo de ejecución en la consola
+        System.out.println("La suma de los números entre " + num1 + " y " + num2 + " es: " + suma);
+        System.out.println("Tiempo de ejecución: " + tiempoEjecucion + " milisegundos");
+
+        scanner.close();
+    }
+}

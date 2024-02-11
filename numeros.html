@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+    // Ingreso de dos números desde el usuario
+    let num1 = parseInt(prompt("Ingrese el primer número:"));
+    let num2 = parseInt(prompt("Ingrese el segundo número:"));
+    let suma = 0; // Inicialización de la variable para la suma
+
+    // Registro del tiempo de inicio de la ejecución
+    let inicio = new Date().getTime();
+
+    // Suma consecutiva de los números entre num1 y num2
+    for (let i = num1; i <= num2; i++) {
+        suma += i; // Acumulación de la suma de los números
+    }
+
+    // Registro del tiempo de finalización de la ejecución
+    let fin = new Date().getTime();
+
+    // Cálculo del tiempo de ejecución en milisegundos
+    let tiempoEjecucion = fin - inicio;
+
+    // Mostrar la suma y el tiempo de ejecución en la página web
+    document.write("La suma de los números entre " + num1 + " y " + num2 + " es: " + suma);
+    document.write("<br>Tiempo de ejecución: " + tiempoEjecucion + " milisegundos");
+
+</script>
+
+</body>
+</html>
